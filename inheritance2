@@ -1,0 +1,41 @@
+class EducationalInstitution{ 
+    public int duration; 
+	public EducationalInstitution(int d){ 
+		duration=d; 
+	} 
+   
+	
+	
+	public String graduationRequirements(){ 
+		return duration+" years of study"; 
+	} 
+ } 
+ class LawSchool extends EducationalInstitution {
+	
+	 public LawSchool(int i) {
+		super(i);
+	
+	}
+	 public String graduationRequirements(){ 
+		 String x= super.graduationRequirements() + " and passing the bar";
+		  return x;
+	 }
+	
+	 
+ }
+ 
+  
+
+
+public class testdemo{ 
+public static void main(String arg[]){ 
+Scanner scanner =new Scanner(System.in); 
+System.out.println("Enter the years:"); 
+int i=scanner.nextInt(); 
+LawSchool ls=new LawSchool(i); 
+
+System.out.println("Output is:"); 
+System.out.println(ls.graduationRequirements()); 
+
+
+} 
